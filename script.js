@@ -5,14 +5,17 @@ let started=false;
 let level=0;
 let h2=document.querySelector("h2");
 
-document.addEventListener("keypress",function(){
+function startGame(){
     if(started==false){
         console.log("game is started");
         started=true;
-
         levelUp();
     }
-})
+}
+document.addEventListener("keypress",startGame);
+setTimeout(() =>{
+    document.addEventListener("click",startGame);
+},100);
 
 
 function gameFlash(btn){
@@ -62,7 +65,11 @@ function checkAns (idx){
         setTimeout(function (){
             document.querySelector("body").style.backgroundColor="white";
         },150);
+        document.removeEventListener("click",startGame);
         reset();
+        setTimeout(() =>{
+            document.addEventListener("click",startGame);
+    },100);
     }
 }
 
