@@ -3,11 +3,13 @@ body{
 }
 
 .btn{
-    height:200px;
-    width:200px;
+    height:40vw;
+    width:40vw;
+    max-width:200px;
+    max-height:200px;
     border-radius:20%;
     border:10px solid black;
-    margin:2rem;
+    margin:0.5rem;
 }
 
 .btn-container{
@@ -47,5 +49,10 @@ body{
         font-size:1rem;
         text-align:center;
         padding:0 10px;
+    }
+    .btn{
+        width:35vw;
+        height:35vw;
+        margin:0.3rem;
     }
 }
